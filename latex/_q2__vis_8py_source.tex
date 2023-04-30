@@ -1,0 +1,33 @@
+\hypertarget{_q2__vis_8py_source}{}\doxysection{Q2\+\_\+vis.\+py}
+\label{_q2__vis_8py_source}\index{Line\_Fitting/Q2\_vis.py@{Line\_Fitting/Q2\_vis.py}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00001}\mbox{\hyperlink{namespace_q2__vis}{00001}}\ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00002}00002\ \textcolor{stringliteral}{This\ file\ is\ used\ to\ visualize\ the\ result\ of\ Line\ Fitting\ problem.}}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00003}00003\ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00004}00004\ \textcolor{keyword}{import}\ matplotlib.pyplot\ \textcolor{keyword}{as}\ plt}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00005}00005\ \textcolor{keyword}{import}\ numpy\ \textcolor{keyword}{as}\ np}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00007}00007\ \textcolor{keyword}{with}\ open(\textcolor{stringliteral}{'equations.txt'},\ \textcolor{stringliteral}{'r'})\ \textcolor{keyword}{as}\ f:}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00008}00008\ \ \ \ \ equations\ =\ f.readlines()}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00010}00010\ \textcolor{keywordflow}{for}\ equation\ \textcolor{keywordflow}{in}\ equations:}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00011}00011\ \ \ \ \ x\ =\ np.linspace(-\/5,\ 10,\ 2)}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00012}00012\ \ \ \ \ y\ =\ eval(equation)}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00013}00013\ \ \ \ \ plt.plot(x,\ y,\ label=equation)}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00015}00015\ \textcolor{keyword}{with}\ open(\textcolor{stringliteral}{'points.txt'},\ \textcolor{stringliteral}{'r'})\ \textcolor{keyword}{as}\ f:}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00016}00016\ \ \ \ \ points\ =\ f.readlines()}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00018}00018\ \textcolor{keywordflow}{for}\ point\ \textcolor{keywordflow}{in}\ points:}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00019}00019\ \ \ \ \ x,\ y\ =\ point.split()}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00020}00020\ \ \ \ \ plt.plot(x,\ y,\ \textcolor{stringliteral}{'ro'})}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00022}00022\ plt.xlabel(\textcolor{stringliteral}{'x'})}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00023}00023\ plt.ylabel(\textcolor{stringliteral}{'y'})}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00024}00024\ plt.title(\textcolor{stringliteral}{'Line\ Fitting'})}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00025}00025\ plt.legend()}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00026}00026\ plt.show()}
+\DoxyCodeLine{\Hypertarget{_q2__vis_8py_source_l00027}00027\ }
+
+\end{DoxyCode}

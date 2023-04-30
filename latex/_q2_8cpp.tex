@@ -1,0 +1,266 @@
+\hypertarget{_q2_8cpp}{}\doxysection{Line\+\_\+\+Fitting/\+Q2.cpp File Reference}
+\label{_q2_8cpp}\index{Line\_Fitting/Q2.cpp@{Line\_Fitting/Q2.cpp}}
+
+
+Line fitting Dynamic Programming Algorithm.  
+
+
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$bitset$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}}~long long int
+\item 
+\#define \mbox{\hyperlink{_q2_8cpp_a600eaf353befc174637855795f12d258}{endl}}~\char`\"{}\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_q2_8cpp_a276c5a0e984cf60015b27252fe04fe6b}{pb}}~push\+\_\+back
+\item 
+\#define \mbox{\hyperlink{_q2_8cpp_a67d84a762be4682d311cad2d7dc4685f}{ppb}}~pop\+\_\+back
+\item 
+\#define \mbox{\hyperlink{_q2_8cpp_aea466a7139309b17bce61d5ccb03e195}{mp}}~make\+\_\+pair
+\item 
+\#define \mbox{\hyperlink{_q2_8cpp_a15b03a2c9444e03de6e8e618cd9006cb}{ff}}~first
+\item 
+\#define \mbox{\hyperlink{_q2_8cpp_a74d3c3c85d450f9238a162d015c0b407}{ss}}~second
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_q2_8cpp_a86c5df5101f24e64608a13f753d13933}{cost}} (vector$<$ pair$<$ double, double $>$ $>$ \&points, int i, int j, double c)
+\begin{DoxyCompactList}\small\item\em This function calculates the cost of a line segment. \end{DoxyCompactList}\item 
+pair$<$ vector$<$ pair$<$ int, int $>$ $>$, double $>$ \mbox{\hyperlink{_q2_8cpp_a98a2c2cbb394353fdbe297f686a52770}{segmented\+\_\+least\+\_\+squares}} (vector$<$ pair$<$ double, double $>$ $>$ \&points, double c)
+\begin{DoxyCompactList}\small\item\em This function calculates the cost of a line segment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_q2_8cpp_ac43130abece1195c3fd0b1d08f29efec}{count\+\_\+partitions}} (vector$<$ pair$<$ int, int $>$ $>$ \&segments, int n)
+\begin{DoxyCompactList}\small\item\em This function counts the number of partitions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em This function counts the number of segments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const ll \mbox{\hyperlink{_q2_8cpp_abcecb52cfca390874e4ff75904153ebe}{inf}} = 1e18
+\item 
+const ll \mbox{\hyperlink{_q2_8cpp_ab235c0a809104a386f008dc5320af70c}{mod}} = 1e9 + 7
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Line fitting Dynamic Programming Algorithm. 
+
+
+
+Definition in file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_q2_8cpp_a600eaf353befc174637855795f12d258}\label{_q2_8cpp_a600eaf353befc174637855795f12d258}} 
+\index{Q2.cpp@{Q2.cpp}!endl@{endl}}
+\index{endl@{endl}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{endl}{endl}}
+{\footnotesize\ttfamily \#define endl~\char`\"{}\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_a15b03a2c9444e03de6e8e618cd9006cb}\label{_q2_8cpp_a15b03a2c9444e03de6e8e618cd9006cb}} 
+\index{Q2.cpp@{Q2.cpp}!ff@{ff}}
+\index{ff@{ff}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{ff}{ff}}
+{\footnotesize\ttfamily \#define ff~first}
+
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}\label{_q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}} 
+\index{Q2.cpp@{Q2.cpp}!ll@{ll}}
+\index{ll@{ll}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{ll}{ll}}
+{\footnotesize\ttfamily \#define ll~long long int}
+
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_aea466a7139309b17bce61d5ccb03e195}\label{_q2_8cpp_aea466a7139309b17bce61d5ccb03e195}} 
+\index{Q2.cpp@{Q2.cpp}!mp@{mp}}
+\index{mp@{mp}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{mp}{mp}}
+{\footnotesize\ttfamily \#define mp~make\+\_\+pair}
+
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_a276c5a0e984cf60015b27252fe04fe6b}\label{_q2_8cpp_a276c5a0e984cf60015b27252fe04fe6b}} 
+\index{Q2.cpp@{Q2.cpp}!pb@{pb}}
+\index{pb@{pb}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{pb}{pb}}
+{\footnotesize\ttfamily \#define pb~push\+\_\+back}
+
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_a67d84a762be4682d311cad2d7dc4685f}\label{_q2_8cpp_a67d84a762be4682d311cad2d7dc4685f}} 
+\index{Q2.cpp@{Q2.cpp}!ppb@{ppb}}
+\index{ppb@{ppb}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{ppb}{ppb}}
+{\footnotesize\ttfamily \#define ppb~pop\+\_\+back}
+
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_a74d3c3c85d450f9238a162d015c0b407}\label{_q2_8cpp_a74d3c3c85d450f9238a162d015c0b407}} 
+\index{Q2.cpp@{Q2.cpp}!ss@{ss}}
+\index{ss@{ss}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{ss}{ss}}
+{\footnotesize\ttfamily \#define ss~second}
+
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_q2_8cpp_a86c5df5101f24e64608a13f753d13933}\label{_q2_8cpp_a86c5df5101f24e64608a13f753d13933}} 
+\index{Q2.cpp@{Q2.cpp}!cost@{cost}}
+\index{cost@{cost}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{cost()}{cost()}}
+{\footnotesize\ttfamily double cost (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ double, double $>$ $>$ \&}]{points,  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{double}]{c }\end{DoxyParamCaption})}
+
+
+
+This function calculates the cost of a line segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & The vector of points \\
+\hline
+{\em i} & The starting index of the line segment \\
+\hline
+{\em j} & The ending index of the line segment \\
+\hline
+{\em c} & The constant c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cost of the line segment 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_ac43130abece1195c3fd0b1d08f29efec}\label{_q2_8cpp_ac43130abece1195c3fd0b1d08f29efec}} 
+\index{Q2.cpp@{Q2.cpp}!count\_partitions@{count\_partitions}}
+\index{count\_partitions@{count\_partitions}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{count\_partitions()}{count\_partitions()}}
+{\footnotesize\ttfamily int count\+\_\+partitions (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ int, int $>$ $>$ \&}]{segments,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+This function counts the number of partitions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segments} & The vector of segments \\
+\hline
+{\em n} & The number of points \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of partitions 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q2.cpp@{Q2.cpp}!main@{main}}
+\index{main@{main}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function counts the number of segments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segments} & The vector of segments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of segments 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00144}{144}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_a98a2c2cbb394353fdbe297f686a52770}\label{_q2_8cpp_a98a2c2cbb394353fdbe297f686a52770}} 
+\index{Q2.cpp@{Q2.cpp}!segmented\_least\_squares@{segmented\_least\_squares}}
+\index{segmented\_least\_squares@{segmented\_least\_squares}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{segmented\_least\_squares()}{segmented\_least\_squares()}}
+{\footnotesize\ttfamily pair$<$ vector$<$ pair$<$ int, int $>$ $>$, double $>$ segmented\+\_\+least\+\_\+squares (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ double, double $>$ $>$ \&}]{points,  }\item[{double}]{c }\end{DoxyParamCaption})}
+
+
+
+This function calculates the cost of a line segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & The vector of points \\
+\hline
+{\em c} & The constant c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cost of the line segment 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_q2_8cpp_abcecb52cfca390874e4ff75904153ebe}\label{_q2_8cpp_abcecb52cfca390874e4ff75904153ebe}} 
+\index{Q2.cpp@{Q2.cpp}!inf@{inf}}
+\index{inf@{inf}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{inf}{inf}}
+{\footnotesize\ttfamily const ll inf = 1e18}
+
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+
+\mbox{\Hypertarget{_q2_8cpp_ab235c0a809104a386f008dc5320af70c}\label{_q2_8cpp_ab235c0a809104a386f008dc5320af70c}} 
+\index{Q2.cpp@{Q2.cpp}!mod@{mod}}
+\index{mod@{mod}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{mod}{mod}}
+{\footnotesize\ttfamily const ll mod = 1e9 + 7}
+
+
+
+Definition at line \mbox{\hyperlink{_q2_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_q2_8cpp_source}{Q2.\+cpp}}.
+

@@ -1,0 +1,110 @@
+\hypertarget{namespace_q1__vis}{}\doxysection{Q1\+\_\+vis Namespace Reference}
+\label{namespace_q1__vis}\index{Q1\_vis@{Q1\_vis}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_q1__vis_1_1_app}{App}}
+\item 
+class \mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_q1__vis_af284bfe1597c1bc0013d40221b1b66a7}{add\+\_\+edge}} (int v, int u, int capacity, List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]} graph)
+\item 
+bool \mbox{\hyperlink{namespace_q1__vis_a6967e81c1a5879cc25f30d61f5a432fc}{bfs}} (List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]} graph, List\mbox{[}int\mbox{]} parent, int s, int t)
+\item 
+int \mbox{\hyperlink{namespace_q1__vis_a583602bc9eb7b0196b1983b1af47393f}{augment}} (List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]} graph, List\mbox{[}int\mbox{]} parent, int s, int t)
+\item 
+int \mbox{\hyperlink{namespace_q1__vis_aa85055ffd5381e3b7d87e69e30b60a82}{ford\+\_\+fulkerson}} (List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]} graph, int s, int t)
+\item 
+Tuple\mbox{[}int, int, int, int, List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]}\mbox{]} \mbox{\hyperlink{namespace_q1__vis_a9149a58da21f777558d85352a13bc8cc}{read\+\_\+graph\+\_\+from\+\_\+file}} (str filepath)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tk \mbox{\hyperlink{namespace_q1__vis_a176362c0da621cb325a10dcfd3f88387}{root}} = tk.\+Tk()
+\item 
+\mbox{\hyperlink{class_q1__vis_1_1_app}{App}} \mbox{\hyperlink{namespace_q1__vis_ab14f6222a58e6ec7703afe495a8f8d53}{app}} = \mbox{\hyperlink{class_q1__vis_1_1_app}{App}}(root)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This file is used to visualize the result of Line Ford-Fulkerson Algorithm.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_q1__vis_af284bfe1597c1bc0013d40221b1b66a7}\label{namespace_q1__vis_af284bfe1597c1bc0013d40221b1b66a7}} 
+\index{Q1\_vis@{Q1\_vis}!add\_edge@{add\_edge}}
+\index{add\_edge@{add\_edge}!Q1\_vis@{Q1\_vis}}
+\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
+{\footnotesize\ttfamily def Q1\+\_\+vis.\+add\+\_\+edge (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{int}]{u,  }\item[{int}]{capacity,  }\item[{List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]}}]{graph }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q1__vis_8py_source_l00017}{17}} of file \mbox{\hyperlink{_q1__vis_8py_source}{Q1\+\_\+vis.\+py}}.
+
+\mbox{\Hypertarget{namespace_q1__vis_a583602bc9eb7b0196b1983b1af47393f}\label{namespace_q1__vis_a583602bc9eb7b0196b1983b1af47393f}} 
+\index{Q1\_vis@{Q1\_vis}!augment@{augment}}
+\index{augment@{augment}!Q1\_vis@{Q1\_vis}}
+\doxysubsubsection{\texorpdfstring{augment()}{augment()}}
+{\footnotesize\ttfamily  int Q1\+\_\+vis.\+augment (\begin{DoxyParamCaption}\item[{List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]}}]{graph,  }\item[{List\mbox{[}int\mbox{]}}]{parent,  }\item[{int}]{s,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q1__vis_8py_source_l00040}{40}} of file \mbox{\hyperlink{_q1__vis_8py_source}{Q1\+\_\+vis.\+py}}.
+
+\mbox{\Hypertarget{namespace_q1__vis_a6967e81c1a5879cc25f30d61f5a432fc}\label{namespace_q1__vis_a6967e81c1a5879cc25f30d61f5a432fc}} 
+\index{Q1\_vis@{Q1\_vis}!bfs@{bfs}}
+\index{bfs@{bfs}!Q1\_vis@{Q1\_vis}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily  bool Q1\+\_\+vis.\+bfs (\begin{DoxyParamCaption}\item[{List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]}}]{graph,  }\item[{List\mbox{[}int\mbox{]}}]{parent,  }\item[{int}]{s,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q1__vis_8py_source_l00023}{23}} of file \mbox{\hyperlink{_q1__vis_8py_source}{Q1\+\_\+vis.\+py}}.
+
+\mbox{\Hypertarget{namespace_q1__vis_aa85055ffd5381e3b7d87e69e30b60a82}\label{namespace_q1__vis_aa85055ffd5381e3b7d87e69e30b60a82}} 
+\index{Q1\_vis@{Q1\_vis}!ford\_fulkerson@{ford\_fulkerson}}
+\index{ford\_fulkerson@{ford\_fulkerson}!Q1\_vis@{Q1\_vis}}
+\doxysubsubsection{\texorpdfstring{ford\_fulkerson()}{ford\_fulkerson()}}
+{\footnotesize\ttfamily  int Q1\+\_\+vis.\+ford\+\_\+fulkerson (\begin{DoxyParamCaption}\item[{List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]}}]{graph,  }\item[{int}]{s,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q1__vis_8py_source_l00065}{65}} of file \mbox{\hyperlink{_q1__vis_8py_source}{Q1\+\_\+vis.\+py}}.
+
+\mbox{\Hypertarget{namespace_q1__vis_a9149a58da21f777558d85352a13bc8cc}\label{namespace_q1__vis_a9149a58da21f777558d85352a13bc8cc}} 
+\index{Q1\_vis@{Q1\_vis}!read\_graph\_from\_file@{read\_graph\_from\_file}}
+\index{read\_graph\_from\_file@{read\_graph\_from\_file}!Q1\_vis@{Q1\_vis}}
+\doxysubsubsection{\texorpdfstring{read\_graph\_from\_file()}{read\_graph\_from\_file()}}
+{\footnotesize\ttfamily  Tuple\mbox{[}int, int, int, int, List\mbox{[}List\mbox{[}\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}\mbox{]}\mbox{]}\mbox{]} Q1\+\_\+vis.\+read\+\_\+graph\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{str}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q1__vis_8py_source_l00074}{74}} of file \mbox{\hyperlink{_q1__vis_8py_source}{Q1\+\_\+vis.\+py}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_q1__vis_ab14f6222a58e6ec7703afe495a8f8d53}\label{namespace_q1__vis_ab14f6222a58e6ec7703afe495a8f8d53}} 
+\index{Q1\_vis@{Q1\_vis}!app@{app}}
+\index{app@{app}!Q1\_vis@{Q1\_vis}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q1__vis_1_1_app}{App}} Q1\+\_\+vis.\+app = \mbox{\hyperlink{class_q1__vis_1_1_app}{App}}(root)}
+
+
+
+Definition at line \mbox{\hyperlink{_q1__vis_8py_source_l00113}{113}} of file \mbox{\hyperlink{_q1__vis_8py_source}{Q1\+\_\+vis.\+py}}.
+
+\mbox{\Hypertarget{namespace_q1__vis_a176362c0da621cb325a10dcfd3f88387}\label{namespace_q1__vis_a176362c0da621cb325a10dcfd3f88387}} 
+\index{Q1\_vis@{Q1\_vis}!root@{root}}
+\index{root@{root}!Q1\_vis@{Q1\_vis}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily tk Q1\+\_\+vis.\+root = tk.\+Tk()}
+
+
+
+Definition at line \mbox{\hyperlink{_q1__vis_8py_source_l00112}{112}} of file \mbox{\hyperlink{_q1__vis_8py_source}{Q1\+\_\+vis.\+py}}.
+

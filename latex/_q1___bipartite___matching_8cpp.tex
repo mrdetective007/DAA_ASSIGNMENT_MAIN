@@ -1,0 +1,296 @@
+\hypertarget{_q1___bipartite___matching_8cpp}{}\doxysection{Ford\+\_\+\+Fulkerson/\+Q1\+\_\+\+Bipartite\+\_\+\+Matching.cpp File Reference}
+\label{_q1___bipartite___matching_8cpp}\index{Ford\_Fulkerson/Q1\_Bipartite\_Matching.cpp@{Ford\_Fulkerson/Q1\_Bipartite\_Matching.cpp}}
+
+
+Bipartite Matching.  
+
+
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$bitset$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_edge}{Edge}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_edge}{Edge}} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_q1___bipartite___matching_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}}~long long int
+\item 
+\#define \mbox{\hyperlink{_q1___bipartite___matching_8cpp_a600eaf353befc174637855795f12d258}{endl}}~\char`\"{}\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_q1___bipartite___matching_8cpp_a276c5a0e984cf60015b27252fe04fe6b}{pb}}~push\+\_\+back
+\item 
+\#define \mbox{\hyperlink{_q1___bipartite___matching_8cpp_a67d84a762be4682d311cad2d7dc4685f}{ppb}}~pop\+\_\+back
+\item 
+\#define \mbox{\hyperlink{_q1___bipartite___matching_8cpp_aea466a7139309b17bce61d5ccb03e195}{mp}}~make\+\_\+pair
+\item 
+\#define \mbox{\hyperlink{_q1___bipartite___matching_8cpp_a15b03a2c9444e03de6e8e618cd9006cb}{ff}}~first
+\item 
+\#define \mbox{\hyperlink{_q1___bipartite___matching_8cpp_a74d3c3c85d450f9238a162d015c0b407}{ss}}~second
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_q1___bipartite___matching_8cpp_a8659eb080960e0ed196a2d44b61f57d2}{add\+\_\+edge}} (int v, int u, int capacity, vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph)
+\begin{DoxyCompactList}\small\item\em Add edge. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_q1___bipartite___matching_8cpp_a251e7dfa4d3554746da7567bfde76430}{bfs}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph, vector$<$ int $>$ \&parent, int s, int t)
+\begin{DoxyCompactList}\small\item\em Breadth First Search. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_q1___bipartite___matching_8cpp_a3b4d685998b36a8bf0b979fe085d018e}{augment}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph, vector$<$ int $>$ \&parent, int s, int t)
+\begin{DoxyCompactList}\small\item\em Augment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_q1___bipartite___matching_8cpp_a31be8702d01476863afe7fe5894b86be}{ford\+\_\+fulkerson}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph, int s, int t)
+\begin{DoxyCompactList}\small\item\em Ford-\/\+Fulkerson Algorithm. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_q1___bipartite___matching_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const ll \mbox{\hyperlink{_q1___bipartite___matching_8cpp_abcecb52cfca390874e4ff75904153ebe}{inf}} = 1e18
+\item 
+const ll \mbox{\hyperlink{_q1___bipartite___matching_8cpp_ab235c0a809104a386f008dc5320af70c}{mod}} = 1e9 + 7
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Bipartite Matching. 
+
+Given a bipartite graph, find the maximum matching in the graph. 
+
+Definition in file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_a600eaf353befc174637855795f12d258}\label{_q1___bipartite___matching_8cpp_a600eaf353befc174637855795f12d258}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!endl@{endl}}
+\index{endl@{endl}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{endl}{endl}}
+{\footnotesize\ttfamily \#define endl~\char`\"{}\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_a15b03a2c9444e03de6e8e618cd9006cb}\label{_q1___bipartite___matching_8cpp_a15b03a2c9444e03de6e8e618cd9006cb}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!ff@{ff}}
+\index{ff@{ff}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{ff}{ff}}
+{\footnotesize\ttfamily \#define ff~first}
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_ae1d1ec9482079231e898236e2b23c9ba}\label{_q1___bipartite___matching_8cpp_ae1d1ec9482079231e898236e2b23c9ba}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!ll@{ll}}
+\index{ll@{ll}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{ll}{ll}}
+{\footnotesize\ttfamily \#define ll~long long int}
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_aea466a7139309b17bce61d5ccb03e195}\label{_q1___bipartite___matching_8cpp_aea466a7139309b17bce61d5ccb03e195}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!mp@{mp}}
+\index{mp@{mp}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{mp}{mp}}
+{\footnotesize\ttfamily \#define mp~make\+\_\+pair}
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_a276c5a0e984cf60015b27252fe04fe6b}\label{_q1___bipartite___matching_8cpp_a276c5a0e984cf60015b27252fe04fe6b}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!pb@{pb}}
+\index{pb@{pb}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{pb}{pb}}
+{\footnotesize\ttfamily \#define pb~push\+\_\+back}
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_a67d84a762be4682d311cad2d7dc4685f}\label{_q1___bipartite___matching_8cpp_a67d84a762be4682d311cad2d7dc4685f}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!ppb@{ppb}}
+\index{ppb@{ppb}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{ppb}{ppb}}
+{\footnotesize\ttfamily \#define ppb~pop\+\_\+back}
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_a74d3c3c85d450f9238a162d015c0b407}\label{_q1___bipartite___matching_8cpp_a74d3c3c85d450f9238a162d015c0b407}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!ss@{ss}}
+\index{ss@{ss}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{ss}{ss}}
+{\footnotesize\ttfamily \#define ss~second}
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_a8659eb080960e0ed196a2d44b61f57d2}\label{_q1___bipartite___matching_8cpp_a8659eb080960e0ed196a2d44b61f57d2}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!add\_edge@{add\_edge}}
+\index{add\_edge@{add\_edge}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
+{\footnotesize\ttfamily void add\+\_\+edge (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{int}]{u,  }\item[{int}]{capacity,  }\item[{vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&}]{graph }\end{DoxyParamCaption})}
+
+
+
+Add edge. 
+
+This function is used to add an edge to the graph. 
+\begin{DoxyParams}{Parameters}
+{\em v} & The starting vertex of the edge \\
+\hline
+{\em u} & The ending vertex of the edge \\
+\hline
+{\em capacity} & The capacity of the edge \\
+\hline
+{\em graph} & The graph on which the edge is to be added \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_a3b4d685998b36a8bf0b979fe085d018e}\label{_q1___bipartite___matching_8cpp_a3b4d685998b36a8bf0b979fe085d018e}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!augment@{augment}}
+\index{augment@{augment}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{augment()}{augment()}}
+{\footnotesize\ttfamily int augment (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&}]{graph,  }\item[{vector$<$ int $>$ \&}]{parent,  }\item[{int}]{s,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Augment. 
+
+This function is used to augment the flow in the graph. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph on which the algorithm is to be run \\
+\hline
+{\em parent} & The parent vector \\
+\hline
+{\em s} & The source vertex \\
+\hline
+{\em t} & The sink vertex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimum flow that can be augmented 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_a251e7dfa4d3554746da7567bfde76430}\label{_q1___bipartite___matching_8cpp_a251e7dfa4d3554746da7567bfde76430}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!bfs@{bfs}}
+\index{bfs@{bfs}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily bool bfs (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&}]{graph,  }\item[{vector$<$ int $>$ \&}]{parent,  }\item[{int}]{s,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Breadth First Search. 
+
+This function is used to find the shortest path from the source vertex to the sink vertex. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph on which the algorithm is to be run \\
+\hline
+{\em parent} & The parent vector \\
+\hline
+{\em s} & The source vertex \\
+\hline
+{\em t} & The sink vertex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there exists a path from the source vertex to the sink vertex, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_a31be8702d01476863afe7fe5894b86be}\label{_q1___bipartite___matching_8cpp_a31be8702d01476863afe7fe5894b86be}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!ford\_fulkerson@{ford\_fulkerson}}
+\index{ford\_fulkerson@{ford\_fulkerson}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{ford\_fulkerson()}{ford\_fulkerson()}}
+{\footnotesize\ttfamily int ford\+\_\+fulkerson (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&}]{graph,  }\item[{int}]{s,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Ford-\/\+Fulkerson Algorithm. 
+
+This algorithm is used to find the maximum flow in a network. It is implemented using the Breadth First Search (BFS) algorithm. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph on which the algorithm is to be run \\
+\hline
+{\em s} & The source vertex \\
+\hline
+{\em t} & The sink vertex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum flow in the network 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_q1___bipartite___matching_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!main@{main}}
+\index{main@{main}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function. 
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00175}{175}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_abcecb52cfca390874e4ff75904153ebe}\label{_q1___bipartite___matching_8cpp_abcecb52cfca390874e4ff75904153ebe}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!inf@{inf}}
+\index{inf@{inf}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{inf}{inf}}
+{\footnotesize\ttfamily const ll inf = 1e18}
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+
+\mbox{\Hypertarget{_q1___bipartite___matching_8cpp_ab235c0a809104a386f008dc5320af70c}\label{_q1___bipartite___matching_8cpp_ab235c0a809104a386f008dc5320af70c}} 
+\index{Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}!mod@{mod}}
+\index{mod@{mod}!Q1\_Bipartite\_Matching.cpp@{Q1\_Bipartite\_Matching.cpp}}
+\doxysubsubsection{\texorpdfstring{mod}{mod}}
+{\footnotesize\ttfamily const ll mod = 1e9 + 7}
+
+
+
+Definition at line \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_q1___bipartite___matching_8cpp_source}{Q1\+\_\+\+Bipartite\+\_\+\+Matching.\+cpp}}.
+

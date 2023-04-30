@@ -1,0 +1,36 @@
+\hypertarget{viz_8py_source}{}\doxysection{viz.\+py}
+\label{viz_8py_source}\index{Line\_Fitting/viz.py@{Line\_Fitting/viz.py}}
+\mbox{\hyperlink{viz_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00001}\mbox{\hyperlink{namespaceviz}{00001}}\ \textcolor{keyword}{import}\ csv}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00002}00002\ \textcolor{keyword}{import}\ matplotlib.pyplot\ \textcolor{keyword}{as}\ plt}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00004}00004\ \textcolor{comment}{\#\ define\ the\ points}}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00005}\mbox{\hyperlink{namespaceviz_a45c16f84bad040c093ff4bf69dd530d0}{00005}}\ x\ =\ [0,\ 1,\ 2,\ 3,\ 4,\ 5,\ 6]}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00006}\mbox{\hyperlink{namespaceviz_a1e2fffd92c5206471f7906ee51989e0d}{00006}}\ y\ =\ [0,\ 1,\ 2,\ 3,\ 2,\ 1,\ 0]}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00008}00008\ \textcolor{comment}{\#\ define\ the\ equations}}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00009}\mbox{\hyperlink{namespaceviz_a86b215b21fb56d5e8cf57c2c82d10ef2}{00009}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespaceviz_a86b215b21fb56d5e8cf57c2c82d10ef2}{eq1}}(x\_val):\ \textcolor{keywordflow}{return}\ 1.00*x\_val\ +\ 0.00}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00010}\mbox{\hyperlink{namespaceviz_a98fef0884a0add5167ee88eb3fdecbb7}{00010}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespaceviz_a98fef0884a0add5167ee88eb3fdecbb7}{eq2}}(x\_val):\ \textcolor{keywordflow}{return}\ -\/1.00*x\_val\ +\ 6.00}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00013}00013\ \textcolor{comment}{\#\ create\ the\ plot}}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00014}\mbox{\hyperlink{namespaceviz_a9070b39ca09a8e3378e8d539bdd97d4d}{00014}}\ fig,\ ax\ =\ plt.subplots()}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00016}00016\ \textcolor{comment}{\#\ plot\ the\ points}}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00017}00017\ ax.plot(x,\ y,\ \textcolor{stringliteral}{'bo'})}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00019}00019\ \textcolor{comment}{\#\ plot\ the\ lines}}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00020}\mbox{\hyperlink{namespaceviz_a84321de47e6a94e31fb8d1809b8ab0ac}{00020}}\ ax.plot(x,\ [\mbox{\hyperlink{namespaceviz_a86b215b21fb56d5e8cf57c2c82d10ef2}{eq1}}(x\_val)\ \textcolor{keywordflow}{for}\ x\_val\ \textcolor{keywordflow}{in}\ x],\ \textcolor{stringliteral}{'r-\/'},\ label=\textcolor{stringliteral}{'y\ =\ 1.00x\ +\ 0.00'})}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00021}00021\ ax.plot(x,\ [\mbox{\hyperlink{namespaceviz_a98fef0884a0add5167ee88eb3fdecbb7}{eq2}}(x\_val)\ \textcolor{keywordflow}{for}\ x\_val\ \textcolor{keywordflow}{in}\ x],\ \textcolor{stringliteral}{'g-\/'},\ label=\textcolor{stringliteral}{'y\ =\ -\/1.00x\ +\ 6.00'})}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00023}00023\ \textcolor{comment}{\#\ set\ the\ labels\ and\ legend}}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00024}00024\ ax.set\_xlabel(\textcolor{stringliteral}{'X'})}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00025}00025\ ax.set\_ylabel(\textcolor{stringliteral}{'Y'})}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00026}00026\ ax.set\_title(\textcolor{stringliteral}{'Plot\ of\ Points\ and\ Lines'})}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00027}00027\ ax.legend()}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00029}00029\ \textcolor{comment}{\#\ display\ the\ plot}}
+\DoxyCodeLine{\Hypertarget{viz_8py_source_l00030}00030\ plt.show()}
+
+\end{DoxyCode}
