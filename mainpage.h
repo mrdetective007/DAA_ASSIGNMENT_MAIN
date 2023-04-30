@@ -20,13 +20,6 @@
  * @subsection b Line Fitting Algorithm
  * This algorithm is used to fit a line to a set of points. It is implemented using the Least Squares Method.
  * We ran the algorithm on different kinds of data sets. Smaller data sets were used to verify the correctness of the algorithm. Larger data sets were used to test the efficiency of the algorithm.
- * @section p Time Analysis
- * @subsection r Time Analysis Ford-Fulkerson
- * \image html images/ford.png "Time Analysis" width=700cm
- * @subsection i Time Analysis Bipartite Matching
- * \image html images/bi.png "Time Analysis" width=700cm
- * @subsection s Time Analysis Line Fitting
- * \image html images/line.png "Time Analysis" width=700cm
  * @section g Test Cases Ford-Fulkerson
  * @subsection h Test Case 1
  * \image html images/1t1.png "Test Cases" width=700cm
