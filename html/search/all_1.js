@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['bfs_0',['bfs',['../_q1_8cpp.html#a251e7dfa4d3554746da7567bfde76430',1,'bfs(vector&lt; vector&lt; Edge &gt; &gt; &amp;graph, vector&lt; int &gt; &amp;parent, int s, int t):&#160;Q1.cpp'],['../_q1___bipartite___matching_8cpp.html#a251e7dfa4d3554746da7567bfde76430',1,'bfs(vector&lt; vector&lt; Edge &gt; &gt; &amp;graph, vector&lt; int &gt; &amp;parent, int s, int t):&#160;Q1_Bipartite_Matching.cpp']]]
+  ['cost_0',['cost',['../_q2_8cpp.html#a86c5df5101f24e64608a13f753d13933',1,'Q2.cpp']]],
+  ['count_5fpartitions_1',['count_partitions',['../_q2_8cpp.html#ac43130abece1195c3fd0b1d08f29efec',1,'Q2.cpp']]]
 ];

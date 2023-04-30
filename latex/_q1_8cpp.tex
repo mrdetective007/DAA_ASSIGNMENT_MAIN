@@ -1,33 +1,11 @@
 \hypertarget{_q1_8cpp}{}\doxysection{Ford\+\_\+\+Fulkerson/\+Q1.cpp File Reference}
 \label{_q1_8cpp}\index{Ford\_Fulkerson/Q1.cpp@{Ford\_Fulkerson/Q1.cpp}}
-
-
-Ford Fulkerson Algorithm.  
-
-
-{\ttfamily \#include $<$algorithm$>$}\newline
-{\ttfamily \#include $<$fstream$>$}\newline
-{\ttfamily \#include $<$climits$>$}\newline
-{\ttfamily \#include $<$array$>$}\newline
-{\ttfamily \#include $<$bitset$>$}\newline
-{\ttfamily \#include $<$cassert$>$}\newline
-{\ttfamily \#include $<$chrono$>$}\newline
-{\ttfamily \#include $<$cmath$>$}\newline
-{\ttfamily \#include $<$cstring$>$}\newline
-{\ttfamily \#include $<$functional$>$}\newline
-{\ttfamily \#include $<$iomanip$>$}\newline
-{\ttfamily \#include $<$iostream$>$}\newline
-{\ttfamily \#include $<$map$>$}\newline
-{\ttfamily \#include $<$numeric$>$}\newline
-{\ttfamily \#include $<$queue$>$}\newline
-{\ttfamily \#include $<$random$>$}\newline
-{\ttfamily \#include $<$set$>$}\newline
-{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_edge}{Edge}}
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_edge}{Edge}} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,37 +27,28 @@ struct \mbox{\hyperlink{struct_edge}{Edge}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{_q1_8cpp_a8659eb080960e0ed196a2d44b61f57d2}{add\+\_\+edge}} (int v, int u, int capacity, vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph)
-\begin{DoxyCompactList}\small\item\em Add edge to the graph. \end{DoxyCompactList}\item 
+\item 
 bool \mbox{\hyperlink{_q1_8cpp_a251e7dfa4d3554746da7567bfde76430}{bfs}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph, vector$<$ int $>$ \&parent, int s, int t)
-\begin{DoxyCompactList}\small\item\em BFS. \end{DoxyCompactList}\item 
+\item 
 int \mbox{\hyperlink{_q1_8cpp_a3b4d685998b36a8bf0b979fe085d018e}{augment}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph, vector$<$ int $>$ \&parent, int s, int t)
-\begin{DoxyCompactList}\small\item\em Augment. \end{DoxyCompactList}\item 
+\item 
 int \mbox{\hyperlink{_q1_8cpp_a31be8702d01476863afe7fe5894b86be}{ford\+\_\+fulkerson}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph, int s, int t)
-\begin{DoxyCompactList}\small\item\em Ford Fulkerson. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{_q1_8cpp_a7164e55c0bb3cfa2fe794d82eaabc937}{print\+\_\+graph}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph)
-\begin{DoxyCompactList}\small\item\em Print graph. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{_q1_8cpp_a478169292a5d0d316d6554daab6584ea}{dfs}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph, vector$<$ bool $>$ \&visited, int s)
-\begin{DoxyCompactList}\small\item\em DFS. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{_q1_8cpp_ab39cfd8097e0f67770b94b2864a1f51b}{print\+\_\+cut}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $>$ $>$ \&graph, int s, int t)
-\begin{DoxyCompactList}\small\item\em Print cut. \end{DoxyCompactList}\item 
+\item 
 int \mbox{\hyperlink{_q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
-\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const ll \mbox{\hyperlink{_q1_8cpp_abcecb52cfca390874e4ff75904153ebe}{inf}} = 1e18
+const \mbox{\hyperlink{_q1_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} \mbox{\hyperlink{_q1_8cpp_abcecb52cfca390874e4ff75904153ebe}{inf}} =1e18
 \item 
-const ll \mbox{\hyperlink{_q1_8cpp_ab235c0a809104a386f008dc5320af70c}{mod}} = 1e9 + 7
+const \mbox{\hyperlink{_q1_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} \mbox{\hyperlink{_q1_8cpp_ab235c0a809104a386f008dc5320af70c}{mod}} =1e9+7
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Detailed Description}
-Ford Fulkerson Algorithm. 
-
-
-
-Definition in file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
-
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -91,7 +60,7 @@ Definition in file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 
 
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_a15b03a2c9444e03de6e8e618cd9006cb}\label{_q1_8cpp_a15b03a2c9444e03de6e8e618cd9006cb}} 
 \index{Q1.cpp@{Q1.cpp}!ff@{ff}}
@@ -101,7 +70,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00028}{28}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_ae1d1ec9482079231e898236e2b23c9ba}\label{_q1_8cpp_ae1d1ec9482079231e898236e2b23c9ba}} 
 \index{Q1.cpp@{Q1.cpp}!ll@{ll}}
@@ -111,7 +80,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00032}{32}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_aea466a7139309b17bce61d5ccb03e195}\label{_q1_8cpp_aea466a7139309b17bce61d5ccb03e195}} 
 \index{Q1.cpp@{Q1.cpp}!mp@{mp}}
@@ -121,7 +90,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00027}{27}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_a276c5a0e984cf60015b27252fe04fe6b}\label{_q1_8cpp_a276c5a0e984cf60015b27252fe04fe6b}} 
 \index{Q1.cpp@{Q1.cpp}!pb@{pb}}
@@ -131,7 +100,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00031}{31}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_a67d84a762be4682d311cad2d7dc4685f}\label{_q1_8cpp_a67d84a762be4682d311cad2d7dc4685f}} 
 \index{Q1.cpp@{Q1.cpp}!ppb@{ppb}}
@@ -141,7 +110,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00029}{29}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_a74d3c3c85d450f9238a162d015c0b407}\label{_q1_8cpp_a74d3c3c85d450f9238a162d015c0b407}} 
 \index{Q1.cpp@{Q1.cpp}!ss@{ss}}
@@ -151,7 +120,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00030}{30}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 
 
@@ -164,25 +133,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00033}{33}} of file \mbox{\
 
 
 
-Add edge to the graph. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em v} & source \\
-\hline
-{\em u} & destination \\
-\hline
-{\em capacity} & capacity of the edge \\
-\hline
-{\em graph} & graph \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_a3b4d685998b36a8bf0b979fe085d018e}\label{_q1_8cpp_a3b4d685998b36a8bf0b979fe085d018e}} 
 \index{Q1.cpp@{Q1.cpp}!augment@{augment}}
@@ -192,37 +143,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00059}{59}} of file \mbox{\
 
 
 
-Augment. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em graph} & graph \\
-\hline
-{\em parent} & parent \\
-\hline
-{\em s} & source \\
-\hline
-{\em t} & destination \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-int 
-\end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\begin{DoxyEnumerate}
-\item Find the minimum flow in the path
-\item Update the flow in the path
-\item Return the minimum flow
-\item Update the residual graph
-\item Repeat until there is no path from s to t
-\item The max flow is the sum of all the flows in the path
-\item The min cut is the set of all the vertices reachable from s in the residual graph 
-\end{DoxyEnumerate}
-\end{DoxyNote}
-
-
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_a251e7dfa4d3554746da7567bfde76430}\label{_q1_8cpp_a251e7dfa4d3554746da7567bfde76430}} 
 \index{Q1.cpp@{Q1.cpp}!bfs@{bfs}}
@@ -232,25 +153,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00120}{120}} of file \mbox{
 
 
 
-BFS. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em graph} & graph \\
-\hline
-{\em parent} & parent \\
-\hline
-{\em s} & source \\
-\hline
-{\em t} & destination \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-bool 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_a478169292a5d0d316d6554daab6584ea}\label{_q1_8cpp_a478169292a5d0d316d6554daab6584ea}} 
 \index{Q1.cpp@{Q1.cpp}!dfs@{dfs}}
@@ -260,23 +163,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00076}{76}} of file \mbox{\
 
 
 
-DFS. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em graph} & graph \\
-\hline
-{\em visited} & visited \\
-\hline
-{\em s} & source \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00220}{220}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_a31be8702d01476863afe7fe5894b86be}\label{_q1_8cpp_a31be8702d01476863afe7fe5894b86be}} 
 \index{Q1.cpp@{Q1.cpp}!ford\_fulkerson@{ford\_fulkerson}}
@@ -286,39 +173,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00220}{220}} of file \mbox{
 
 
 
-Ford Fulkerson. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em graph} & graph \\
-\hline
-{\em s} & source \\
-\hline
-{\em t} & destination \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-int 
-\end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\begin{DoxyEnumerate}
-\item Find the path from s to t using BFS
-\item Augment the path
-\item Repeat until there is no path from s to t
-\item The max flow is the sum of all the flows in the path
-\item The min cut is the set of all the vertices reachable from s in the residual graph 
-\end{DoxyEnumerate}
-
-
-\begin{DoxyEnumerate}
-\item Time complexity\+: O(\+E $\ast$ max\+\_\+flow)
-\item Space complexity\+: O(V + E) 
-\end{DoxyEnumerate}
-\end{DoxyNote}
-
-
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00176}{176}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
 \index{Q1.cpp@{Q1.cpp}!main@{main}}
@@ -328,14 +183,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00176}{176}} of file \mbox{
 
 
 
-Main function. 
-
-\begin{DoxyReturn}{Returns}
-int 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00266}{266}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_ab39cfd8097e0f67770b94b2864a1f51b}\label{_q1_8cpp_ab39cfd8097e0f67770b94b2864a1f51b}} 
 \index{Q1.cpp@{Q1.cpp}!print\_cut@{print\_cut}}
@@ -345,23 +193,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00266}{266}} of file \mbox{
 
 
 
-Print cut. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em graph} & graph \\
-\hline
-{\em s} & source \\
-\hline
-{\em t} & destination \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00240}{240}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_a7164e55c0bb3cfa2fe794d82eaabc937}\label{_q1_8cpp_a7164e55c0bb3cfa2fe794d82eaabc937}} 
 \index{Q1.cpp@{Q1.cpp}!print\_graph@{print\_graph}}
@@ -371,19 +203,7 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00240}{240}} of file \mbox{
 
 
 
-Print graph. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em graph} & graph \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00195}{195}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 
 
@@ -392,19 +212,19 @@ Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00195}{195}} of file \mbox{
 \index{Q1.cpp@{Q1.cpp}!inf@{inf}}
 \index{inf@{inf}!Q1.cpp@{Q1.cpp}}
 \doxysubsubsection{\texorpdfstring{inf}{inf}}
-{\footnotesize\ttfamily const ll inf = 1e18}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_q1_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} inf =1e18}
 
 
 
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 
 \mbox{\Hypertarget{_q1_8cpp_ab235c0a809104a386f008dc5320af70c}\label{_q1_8cpp_ab235c0a809104a386f008dc5320af70c}} 
 \index{Q1.cpp@{Q1.cpp}!mod@{mod}}
 \index{mod@{mod}!Q1.cpp@{Q1.cpp}}
 \doxysubsubsection{\texorpdfstring{mod}{mod}}
-{\footnotesize\ttfamily const ll mod = 1e9 + 7}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_q1_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} mod =1e9+7}
 
 
 
-Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
+Definition at line \mbox{\hyperlink{_q1_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_q1_8cpp_source}{Q1.\+cpp}}.
 

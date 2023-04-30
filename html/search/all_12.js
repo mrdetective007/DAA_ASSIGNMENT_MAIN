@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['we_20have_20implemented_20the_20following_20algorithms_3a_0',['We have implemented the following algorithms:',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['x_0',['x',['../namespace_q2__vis.html#a83c714a5261d574b709f575a2843c3d1',1,'Q2_vis']]]
 ];

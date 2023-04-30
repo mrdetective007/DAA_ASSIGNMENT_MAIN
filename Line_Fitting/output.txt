@@ -1,10 +1,8 @@
-4 2
-2 -1
-The final cost of segments is: 5.50
+The final cost of segments is: 2.00
 The starting index is: 0 and The ending index is: 2
 The starting index is: 3 and The ending index is: 4
 The number of segments are : 2
-(0.00, 0.00) (1.00, 2.00) (2.00, 1.00) 
-(3.00, 5.00) (4.00, 3.00) 
-The equation of the line is: y = 0.50x + 0.50
-The equation of the line is: y = -2.00x + 11.00
+(0.00, 0.00) (1.00, 1.00) (2.00, 2.00) 
+(3.00, 5.00) (4.00, 6.00) 
+The equation of the line is: y = 1.00x + 0.00
+The equation of the line is: y = 1.00x + 2.00

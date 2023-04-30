@@ -1,3 +1,6 @@
+"""
+This file is used to visualize the result of Line Fitting problem.
+"""
 import matplotlib.pyplot as plt
 import numpy as np
 

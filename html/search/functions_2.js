@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['cost_0',['cost',['../_q2_8cpp.html#a86c5df5101f24e64608a13f753d13933',1,'Q2.cpp']]],
-  ['count_5fpartitions_1',['count_partitions',['../_q2_8cpp.html#ac43130abece1195c3fd0b1d08f29efec',1,'Q2.cpp']]]
+  ['segmented_5fleast_5fsquares_0',['segmented_least_squares',['../_q2_8cpp.html#a98a2c2cbb394353fdbe297f686a52770',1,'Q2.cpp']]]
 ];

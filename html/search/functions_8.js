@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['print_5fcut_0',['print_cut',['../_q1_8cpp.html#ab39cfd8097e0f67770b94b2864a1f51b',1,'Q1.cpp']]],
-  ['print_5fgraph_1',['print_graph',['../_q1_8cpp.html#a7164e55c0bb3cfa2fe794d82eaabc937',1,'Q1.cpp']]]
+  ['read_5fgraph_5ffrom_5ffile_0',['read_graph_from_file',['../namespace_q1__vis.html#a9149a58da21f777558d85352a13bc8cc',1,'Q1_vis']]],
+  ['run_5falgorithm_1',['run_algorithm',['../class_q1__vis_1_1_app.html#a24446690751d9696386198c697c22108',1,'Q1_vis::App']]]
 ];

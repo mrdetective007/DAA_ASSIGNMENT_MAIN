@@ -20,4 +20,33 @@
  * @subsection b Line Fitting Algorithm
  * This algorithm is used to fit a line to a set of points. It is implemented using the Least Squares Method.
  * We ran the algorithm on different kinds of data sets. Smaller data sets were used to verify the correctness of the algorithm. Larger data sets were used to test the efficiency of the algorithm.
+ * @section p Time Analysis
+ * @subsection r Time Analysis Ford-Fulkerson
+ * \image html images/ford.png "Time Analysis" width=700cm
+ * @subsection i Time Analysis Bipartite Matching
+ * \image html images/bi.png "Time Analysis" width=700cm
+ * @subsection s Time Analysis Line Fitting
+ * \image html images/line.png "Time Analysis" width=700cm
+ * @section g Test Cases Ford-Fulkerson
+ * @subsection h Test Case 1
+ * \image html images/1t1.png "Test Cases" width=700cm
+ * @subsection i Test Case 2
+ * \image html images/1t2.png "Test Cases" width=700cm
+ * @section j Bipartite Matching
+ * @subsection k Test Case 1
+ * \image html images/r1.png "Test Cases" width=700cm
+ * @subsection l Test Case 2
+ * \image html images/r2.png "Test Cases" width=700cm
+ * @subsection m Test Case 3
+ * \image html images/r3.png "Test Cases" width=700cm
+ * @section c Test Cases Line Fitting
+ * @subsection d Test Case 1
+ * \image html images/t1.png "Test Cases" width=700cm
+ * \image html images/t1a.png "Test Cases" width=700cm
+ * @subsection e Test Case 2
+ * \image html images/t2.png "Test Cases" width=700cm
+ * \image html images/t2a.png "Test Cases" width=700cm
+ * @subsection f Test Case 3
+ * \image html images/t3.png "Test Cases" width=700cm
+ * \image html images/t3a.png "Test Cases" width=700cm
  */

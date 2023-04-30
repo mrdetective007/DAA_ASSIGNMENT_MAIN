@@ -2,119 +2,116 @@
 \label{_q1__vis_8py_source}\index{Ford\_Fulkerson/Q1\_vis.py@{Ford\_Fulkerson/Q1\_vis.py}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00001}\mbox{\hyperlink{namespace_q1__vis}{00001}}\ \textcolor{stringliteral}{"{}"{}"{}}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00002}00002\ \textcolor{stringliteral}{This\ file\ is\ used\ to\ visualize\ the\ result\ of\ Line\ Ford-\/Fulkerson\ Algorithm.}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00003}00003\ \textcolor{stringliteral}{"{}"{}"{}}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00004}00004\ \textcolor{keyword}{import}\ tkinter\ \textcolor{keyword}{as}\ tk}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00005}00005\ \textcolor{keyword}{from}\ tkinter\ \textcolor{keyword}{import}\ filedialog}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00006}00006\ \textcolor{keyword}{from}\ tkinter\ \textcolor{keyword}{import}\ messagebox}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00007}00007\ \textcolor{keyword}{from}\ functools\ \textcolor{keyword}{import}\ partial}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00008}00008\ \textcolor{keyword}{from}\ typing\ \textcolor{keyword}{import}\ List,\ Tuple}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00010}\mbox{\hyperlink{class_q1__vis_1_1_edge}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{def\ }\_\_init\_\_(self,\ v,\ u,\ capacity,\ flow):}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00012}00012\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_edge_a4cf971a44470f42473a06e47e6bdab1f}{v}}\ =\ v}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00013}00013\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_edge_a4ebad3b2c141af18aa4a179f824e8a4d}{u}}\ =\ u}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00014}00014\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_edge_ab1a30541ecc8c6348a0b9ca19cfc6413}{capacity}}\ =\ capacity}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00015}00015\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_edge_acf8b859c2312b86e8324b7df6853b04d}{flow}}\ =\ flow}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00017}00017\ \textcolor{keyword}{def\ }add\_edge(v:\ int,\ u:\ int,\ capacity:\ int,\ graph:\ List[List[Edge]]):}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00018}00018\ \ \ \ \ e1\ =\ \mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}(v,\ u,\ capacity,\ 0)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00019}00019\ \ \ \ \ e2\ =\ \mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}(u,\ v,\ 0,\ 0)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00020}00020\ \ \ \ \ graph[v].append(e1)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00021}00021\ \ \ \ \ graph[u].append(e2)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00023}00023\ \textcolor{keyword}{def\ }bfs(graph:\ List[List[Edge]],\ parent:\ List[int],\ s:\ int,\ t:\ int)\ -\/>\ bool:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00024}00024\ \ \ \ \ n\ =\ len(graph)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00025}00025\ \ \ \ \ visited\ =\ [\textcolor{keyword}{False}]\ *\ n}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00026}00026\ \ \ \ \ q\ =\ [s]}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00027}00027\ \ \ \ \ visited[s]\ =\ \textcolor{keyword}{True}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00028}00028\ \ \ \ \ parent[s]\ =\ -\/1}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{while}\ q:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00030}00030\ \ \ \ \ \ \ \ \ u\ =\ q.pop(0)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00031}00031\ \ \ \ \ \ \ \ \ visited[u]\ =\ \textcolor{keyword}{True}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ e\ \textcolor{keywordflow}{in}\ graph[u]:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ v\ =\ e.u}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keywordflow}{not}\ visited[v]\ \textcolor{keywordflow}{and}\ e.capacity\ >\ e.flow:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visited[v]\ =\ \textcolor{keyword}{True}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parent[v]\ =\ u}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q.append(v)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{return}\ visited[t]}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00039}00039\ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00040}00040\ \textcolor{keyword}{def\ }augment(graph:\ List[List[Edge]],\ parent:\ List[int],\ s:\ int,\ t:\ int)\ -\/>\ int:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00041}00041\ \ \ \ \ n\ =\ len(graph)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00042}00042\ \ \ \ \ min\_flow\ =\ float(\textcolor{stringliteral}{'inf'})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00043}00043\ \ \ \ \ v\ =\ t}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{while}\ v\ !=\ s:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ u\ =\ parent[v]}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ e\ \textcolor{keywordflow}{in}\ graph[u]:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ e.u\ ==\ v:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_flow\ =\ min(min\_flow,\ e.capacity\ -\/\ e.flow)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ v\ =\ u}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00051}00051\ \ \ \ \ v\ =\ t}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{while}\ v\ !=\ s:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00053}00053\ \ \ \ \ \ \ \ \ u\ =\ parent[v]}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ e\ \textcolor{keywordflow}{in}\ graph[u]:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ e.u\ ==\ v:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ e.flow\ +=\ min\_flow}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ e\ \textcolor{keywordflow}{in}\ graph[v]:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ e.u\ ==\ u:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ e.flow\ -\/=\ min\_flow}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00062}00062\ \ \ \ \ \ \ \ \ v\ =\ u}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{return}\ min\_flow}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00064}00064\ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00065}00065\ \textcolor{keyword}{def\ }ford\_fulkerson(graph:\ List[List[Edge]],\ s:\ int,\ t:\ int)\ -\/>\ int:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00066}00066\ \ \ \ \ n\ =\ len(graph)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00067}00067\ \ \ \ \ parent\ =\ [0]\ *\ n}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00068}00068\ \ \ \ \ max\_flow\ =\ 0}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{while}\ bfs(graph,\ parent,\ s,\ t):}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ flow\ =\ augment(graph,\ parent,\ s,\ t)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ max\_flow\ +=\ flow}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{return}\ max\_flow}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00074}00074\ \textcolor{keyword}{def\ }read\_graph\_from\_file(filepath:\ str)\ -\/>\ Tuple[int,\ int,\ int,\ int,\ List[List[Edge]]]:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00075}00075\ \ \ \ \ \textcolor{keyword}{with}\ open(filepath)\ \textcolor{keyword}{as}\ f:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ n,\ m,\ s,\ t\ =\ map(int,\ f.readline().split())}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ graph\ =\ [[]\ \textcolor{keywordflow}{for}\ \_\ \textcolor{keywordflow}{in}\ range(n)]}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ \_\ \textcolor{keywordflow}{in}\ range(m):}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ u,\ v,\ c\ =\ map(int,\ f.readline().split())}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ add\_edge(u,\ v,\ c,\ graph)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ n,\ m,\ s,\ t,\ graph}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00082}00082\ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00083}\mbox{\hyperlink{class_q1__vis_1_1_app}{00083}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_q1__vis_1_1_app}{App}}:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{def\ }\_\_init\_\_(self,\ master):}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_aa86fd766aeab0a3bf0475580f2eaf184}{master}}\ =\ master}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00086}00086\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}}\ =\ \textcolor{stringliteral}{"{}"{}}}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00087}00087\ \ \ \ \ \ \ \ \ self.n,\ self.m,\ self.s,\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a5f2f852f34291d0e73c567b9c8d93841}{t}}\ =\ 0,\ 0,\ 0,\ 0}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00088}00088\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a1a5aa86fc063e648ea0405173199f2cf}{graph}}\ =\ []}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00089}00089\ \ \ \ \ \ \ \ \ master.title(\textcolor{stringliteral}{"{}Ford-\/Fulkerson\ Algorithm"{}})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00090}00090\ \ \ \ \ \ \ \ \ master.geometry(\textcolor{stringliteral}{"{}500x400"{}})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00091}00091\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_aefda3b6ab06201feeca6c1b67552b6ee}{choose\_file\_btn}}\ =\ tk.Button(master,\ text=\textcolor{stringliteral}{"{}Choose\ File"{}},\ command=self.\mbox{\hyperlink{class_q1__vis_1_1_app_a5b9d3f1a99d33c5ff2e8d50dd6711a7c}{choose\_file}})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00092}00092\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_aefda3b6ab06201feeca6c1b67552b6ee}{choose\_file\_btn}}.pack(pady=10)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00093}00093\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a4572670f4458d4e4e15ea534eb31f4f5}{max\_flow\_lbl}}\ =\ tk.Label(master,\ text=\textcolor{stringliteral}{"{}"{}})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00094}00094\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a4572670f4458d4e4e15ea534eb31f4f5}{max\_flow\_lbl}}.pack(pady=10)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00095}00095\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a64f5828da56cf424a3855731687d675c}{run\_algorithm\_btn}}\ =\ tk.Button(master,\ text=\textcolor{stringliteral}{"{}Run\ Algorithm"{}},\ command=self.\mbox{\hyperlink{class_q1__vis_1_1_app_a24446690751d9696386198c697c22108}{run\_algorithm}})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00096}00096\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a64f5828da56cf424a3855731687d675c}{run\_algorithm\_btn}}.pack(pady=10)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00097}00097\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_ab0994c0ba7679aff78f94427d5e1e18b}{quit\_btn}}\ =\ tk.Button(master,\ text=\textcolor{stringliteral}{"{}Quit"{}},\ command=master.quit)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00098}00098\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_ab0994c0ba7679aff78f94427d5e1e18b}{quit\_btn}}.pack(pady=10)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00099}00099\ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00100}00100\ \ \ \ \ \textcolor{keyword}{def\ }choose\_file(self):}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00101}00101\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}}\ =\ filedialog.askopenfilename()}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}}:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ self.n,\ self.m,\ self.s,\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a5f2f852f34291d0e73c567b9c8d93841}{t}},\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a1a5aa86fc063e648ea0405173199f2cf}{graph}}\ =\ read\_graph\_from\_file(self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a4572670f4458d4e4e15ea534eb31f4f5}{max\_flow\_lbl}}.config(text=f\textcolor{stringliteral}{"{}Max\ Flow:\ \{ford\_fulkerson(self.graph,\ self.s,\ self.t)\}"{}})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00105}00105\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00106}00106\ \ \ \ \ \textcolor{keyword}{def\ }run\_algorithm(self):}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}}:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a4572670f4458d4e4e15ea534eb31f4f5}{max\_flow\_lbl}}.config(text=f\textcolor{stringliteral}{"{}Max\ Flow:\ \{ford\_fulkerson(self.graph,\ self.s,\ self.t)\}"{}})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ messagebox.showerror(\textcolor{stringliteral}{"{}Error"{}},\ \textcolor{stringliteral}{"{}Please\ choose\ a\ file\ first!"{}})}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00111}00111\ }
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00112}00112\ root\ =\ tk.Tk()}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00113}00113\ app\ =\ \mbox{\hyperlink{class_q1__vis_1_1_app}{App}}(root)}
-\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00114}00114\ root.mainloop()}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00001}00001\ \textcolor{keyword}{import}\ tkinter\ \textcolor{keyword}{as}\ tk}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00002}00002\ \textcolor{keyword}{from}\ tkinter\ \textcolor{keyword}{import}\ filedialog}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00003}00003\ \textcolor{keyword}{from}\ tkinter\ \textcolor{keyword}{import}\ messagebox}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00004}00004\ \textcolor{keyword}{from}\ functools\ \textcolor{keyword}{import}\ partial}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00005}00005\ \textcolor{keyword}{from}\ typing\ \textcolor{keyword}{import}\ List,\ Tuple}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00007}\mbox{\hyperlink{class_q1__vis_1_1_edge}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{def\ }\_\_init\_\_(self,\ v,\ u,\ capacity,\ flow):}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00009}00009\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_edge_a4cf971a44470f42473a06e47e6bdab1f}{v}}\ =\ v}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00010}00010\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_edge_a4ebad3b2c141af18aa4a179f824e8a4d}{u}}\ =\ u}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00011}00011\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_edge_ab1a30541ecc8c6348a0b9ca19cfc6413}{capacity}}\ =\ capacity}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00012}00012\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_edge_acf8b859c2312b86e8324b7df6853b04d}{flow}}\ =\ flow}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00014}00014\ \textcolor{keyword}{def\ }add\_edge(v:\ int,\ u:\ int,\ capacity:\ int,\ graph:\ List[List[Edge]]):}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00015}00015\ \ \ \ \ e1\ =\ \mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}(v,\ u,\ capacity,\ 0)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00016}00016\ \ \ \ \ e2\ =\ \mbox{\hyperlink{class_q1__vis_1_1_edge}{Edge}}(u,\ v,\ 0,\ 0)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00017}00017\ \ \ \ \ graph[v].append(e1)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00018}00018\ \ \ \ \ graph[u].append(e2)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00020}00020\ \textcolor{keyword}{def\ }bfs(graph:\ List[List[Edge]],\ parent:\ List[int],\ s:\ int,\ t:\ int)\ -\/>\ bool:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00021}00021\ \ \ \ \ n\ =\ len(graph)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00022}00022\ \ \ \ \ visited\ =\ [\textcolor{keyword}{False}]\ *\ n}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00023}00023\ \ \ \ \ q\ =\ [s]}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00024}00024\ \ \ \ \ visited[s]\ =\ \textcolor{keyword}{True}}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00025}00025\ \ \ \ \ parent[s]\ =\ -\/1}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{while}\ q:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00027}00027\ \ \ \ \ \ \ \ \ u\ =\ q.pop(0)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00028}00028\ \ \ \ \ \ \ \ \ visited[u]\ =\ \textcolor{keyword}{True}}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ e\ \textcolor{keywordflow}{in}\ graph[u]:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ v\ =\ e.u}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keywordflow}{not}\ visited[v]\ \textcolor{keywordflow}{and}\ e.capacity\ >\ e.flow:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visited[v]\ =\ \textcolor{keyword}{True}}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parent[v]\ =\ u}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q.append(v)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{return}\ visited[t]}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00037}00037\ \textcolor{keyword}{def\ }augment(graph:\ List[List[Edge]],\ parent:\ List[int],\ s:\ int,\ t:\ int)\ -\/>\ int:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00038}00038\ \ \ \ \ n\ =\ len(graph)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00039}00039\ \ \ \ \ min\_flow\ =\ float(\textcolor{stringliteral}{'inf'})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00040}00040\ \ \ \ \ v\ =\ t}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{while}\ v\ !=\ s:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00042}00042\ \ \ \ \ \ \ \ \ u\ =\ parent[v]}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ e\ \textcolor{keywordflow}{in}\ graph[u]:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ e.u\ ==\ v:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_flow\ =\ min(min\_flow,\ e.capacity\ -\/\ e.flow)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ v\ =\ u}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00048}00048\ \ \ \ \ v\ =\ t}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{while}\ v\ !=\ s:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ u\ =\ parent[v]}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ e\ \textcolor{keywordflow}{in}\ graph[u]:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ e.u\ ==\ v:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ e.flow\ +=\ min\_flow}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ e\ \textcolor{keywordflow}{in}\ graph[v]:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ e.u\ ==\ u:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ e.flow\ -\/=\ min\_flow}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ v\ =\ u}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{return}\ min\_flow}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00062}00062\ \textcolor{keyword}{def\ }ford\_fulkerson(graph:\ List[List[Edge]],\ s:\ int,\ t:\ int)\ -\/>\ int:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00063}00063\ \ \ \ \ n\ =\ len(graph)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00064}00064\ \ \ \ \ parent\ =\ [0]\ *\ n}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00065}00065\ \ \ \ \ max\_flow\ =\ 0}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{while}\ bfs(graph,\ parent,\ s,\ t):}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ flow\ =\ augment(graph,\ parent,\ s,\ t)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00068}00068\ \ \ \ \ \ \ \ \ max\_flow\ +=\ flow}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{return}\ max\_flow}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00071}00071\ \textcolor{keyword}{def\ }read\_graph\_from\_file(filepath:\ str)\ -\/>\ Tuple[int,\ int,\ int,\ int,\ List[List[Edge]]]:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{with}\ open(filepath)\ \textcolor{keyword}{as}\ f:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ n,\ m,\ s,\ t\ =\ map(int,\ f.readline().split())}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ graph\ =\ [[]\ \textcolor{keywordflow}{for}\ \_\ \textcolor{keywordflow}{in}\ range(n)]}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ \_\ \textcolor{keywordflow}{in}\ range(m):}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ u,\ v,\ c\ =\ map(int,\ f.readline().split())}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ add\_edge(u,\ v,\ c,\ graph)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ n,\ m,\ s,\ t,\ graph}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00080}\mbox{\hyperlink{class_q1__vis_1_1_app}{00080}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_q1__vis_1_1_app}{App}}:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00081}00081\ \ \ \ \ \textcolor{keyword}{def\ }\_\_init\_\_(self,\ master):}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00082}00082\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_aa86fd766aeab0a3bf0475580f2eaf184}{master}}\ =\ master}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}}\ =\ \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00084}00084\ \ \ \ \ \ \ \ \ self.n,\ self.m,\ self.s,\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a5f2f852f34291d0e73c567b9c8d93841}{t}}\ =\ 0,\ 0,\ 0,\ 0}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a1a5aa86fc063e648ea0405173199f2cf}{graph}}\ =\ []}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00086}00086\ \ \ \ \ \ \ \ \ master.title(\textcolor{stringliteral}{"{}Ford-\/Fulkerson\ Algorithm"{}})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00087}00087\ \ \ \ \ \ \ \ \ master.geometry(\textcolor{stringliteral}{"{}500x400"{}})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00088}00088\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_aefda3b6ab06201feeca6c1b67552b6ee}{choose\_file\_btn}}\ =\ tk.Button(master,\ text=\textcolor{stringliteral}{"{}Choose\ File"{}},\ command=self.\mbox{\hyperlink{class_q1__vis_1_1_app_a5b9d3f1a99d33c5ff2e8d50dd6711a7c}{choose\_file}})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00089}00089\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_aefda3b6ab06201feeca6c1b67552b6ee}{choose\_file\_btn}}.pack(pady=10)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00090}00090\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a4572670f4458d4e4e15ea534eb31f4f5}{max\_flow\_lbl}}\ =\ tk.Label(master,\ text=\textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00091}00091\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a4572670f4458d4e4e15ea534eb31f4f5}{max\_flow\_lbl}}.pack(pady=10)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00092}00092\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a64f5828da56cf424a3855731687d675c}{run\_algorithm\_btn}}\ =\ tk.Button(master,\ text=\textcolor{stringliteral}{"{}Run\ Algorithm"{}},\ command=self.\mbox{\hyperlink{class_q1__vis_1_1_app_a24446690751d9696386198c697c22108}{run\_algorithm}})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00093}00093\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a64f5828da56cf424a3855731687d675c}{run\_algorithm\_btn}}.pack(pady=10)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00094}00094\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_ab0994c0ba7679aff78f94427d5e1e18b}{quit\_btn}}\ =\ tk.Button(master,\ text=\textcolor{stringliteral}{"{}Quit"{}},\ command=master.quit)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00095}00095\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_ab0994c0ba7679aff78f94427d5e1e18b}{quit\_btn}}.pack(pady=10)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00097}00097\ \ \ \ \ \textcolor{keyword}{def\ }choose\_file(self):}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00098}00098\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}}\ =\ filedialog.askopenfilename()}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}}:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ self.n,\ self.m,\ self.s,\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a5f2f852f34291d0e73c567b9c8d93841}{t}},\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a1a5aa86fc063e648ea0405173199f2cf}{graph}}\ =\ read\_graph\_from\_file(self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a4572670f4458d4e4e15ea534eb31f4f5}{max\_flow\_lbl}}.config(text=f\textcolor{stringliteral}{"{}Max\ Flow:\ \{ford\_fulkerson(self.graph,\ self.s,\ self.t)\}"{}})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00102}00102\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00103}00103\ \ \ \ \ \textcolor{keyword}{def\ }run\_algorithm(self):}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{class_q1__vis_1_1_app_addf7ad8e491cd397ee718df552705f18}{filepath}}:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{class_q1__vis_1_1_app_a4572670f4458d4e4e15ea534eb31f4f5}{max\_flow\_lbl}}.config(text=f\textcolor{stringliteral}{"{}Max\ Flow:\ \{ford\_fulkerson(self.graph,\ self.s,\ self.t)\}"{}})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ messagebox.showerror(\textcolor{stringliteral}{"{}Error"{}},\ \textcolor{stringliteral}{"{}Please\ choose\ a\ file\ first!"{}})}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00109}00109\ root\ =\ tk.Tk()}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00110}00110\ app\ =\ \mbox{\hyperlink{class_q1__vis_1_1_app}{App}}(root)}
+\DoxyCodeLine{\Hypertarget{_q1__vis_8py_source_l00111}00111\ root.mainloop()}
 
 \end{DoxyCode}

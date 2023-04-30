@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dfs_0',['dfs',['../_q1_8cpp.html#a478169292a5d0d316d6554daab6584ea',1,'Q1.cpp']]]
+  ['edge_0',['Edge',['../struct_edge.html',1,'Edge'],['../class_q1__vis_1_1_edge.html',1,'Q1_vis.Edge']]]
 ];

@@ -81,34 +81,13 @@ $(function() {
   <div class="headertitle"><div class="title">Q1_Bipartite_Matching.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Bipartite Matching.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;climits&gt;</code><br />
-<code>#include &lt;array&gt;</code><br />
-<code>#include &lt;bitset&gt;</code><br />
-<code>#include &lt;cassert&gt;</code><br />
-<code>#include &lt;chrono&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
-<code>#include &lt;functional&gt;</code><br />
-<code>#include &lt;iomanip&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;map&gt;</code><br />
-<code>#include &lt;numeric&gt;</code><br />
-<code>#include &lt;queue&gt;</code><br />
-<code>#include &lt;random&gt;</code><br />
-<code>#include &lt;set&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;bits/stdc++.h&gt;</code><br />
 </div>
 <p><a href="_q1___bipartite___matching_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edge.html">Edge</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_edge.html" title="Edge structure.">Edge</a> structure.  <a href="struct_edge.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -131,34 +110,24 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8659eb080960e0ed196a2d44b61f57d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1___bipartite___matching_8cpp.html#a8659eb080960e0ed196a2d44b61f57d2">add_edge</a> (int v, int u, int capacity, vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph)</td></tr>
-<tr class="memdesc:a8659eb080960e0ed196a2d44b61f57d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add edge.  <br /></td></tr>
 <tr class="separator:a8659eb080960e0ed196a2d44b61f57d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a251e7dfa4d3554746da7567bfde76430"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1___bipartite___matching_8cpp.html#a251e7dfa4d3554746da7567bfde76430">bfs</a> (vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph, vector&lt; int &gt; &amp;parent, int s, int t)</td></tr>
-<tr class="memdesc:a251e7dfa4d3554746da7567bfde76430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Breadth First Search.  <br /></td></tr>
 <tr class="separator:a251e7dfa4d3554746da7567bfde76430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b4d685998b36a8bf0b979fe085d018e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1___bipartite___matching_8cpp.html#a3b4d685998b36a8bf0b979fe085d018e">augment</a> (vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph, vector&lt; int &gt; &amp;parent, int s, int t)</td></tr>
-<tr class="memdesc:a3b4d685998b36a8bf0b979fe085d018e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Augment.  <br /></td></tr>
 <tr class="separator:a3b4d685998b36a8bf0b979fe085d018e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31be8702d01476863afe7fe5894b86be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1___bipartite___matching_8cpp.html#a31be8702d01476863afe7fe5894b86be">ford_fulkerson</a> (vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph, int s, int t)</td></tr>
-<tr class="memdesc:a31be8702d01476863afe7fe5894b86be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ford-Fulkerson Algorithm.  <br /></td></tr>
 <tr class="separator:a31be8702d01476863afe7fe5894b86be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1___bipartite___matching_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:abcecb52cfca390874e4ff75904153ebe"><td class="memItemLeft" align="right" valign="top">const ll&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1___bipartite___matching_8cpp.html#abcecb52cfca390874e4ff75904153ebe">inf</a> = 1e18</td></tr>
+<tr class="memitem:abcecb52cfca390874e4ff75904153ebe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_q1_8cpp.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1___bipartite___matching_8cpp.html#abcecb52cfca390874e4ff75904153ebe">inf</a> =1e18</td></tr>
 <tr class="separator:abcecb52cfca390874e4ff75904153ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab235c0a809104a386f008dc5320af70c"><td class="memItemLeft" align="right" valign="top">const ll&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1___bipartite___matching_8cpp.html#ab235c0a809104a386f008dc5320af70c">mod</a> = 1e9 + 7</td></tr>
+<tr class="memitem:ab235c0a809104a386f008dc5320af70c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_q1_8cpp.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1___bipartite___matching_8cpp.html#ab235c0a809104a386f008dc5320af70c">mod</a> =1e9+7</td></tr>
 <tr class="separator:ab235c0a809104a386f008dc5320af70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Bipartite Matching. </p>
-<p>Given a bipartite graph, find the maximum matching in the graph. </p>
-
-<p class="definition">Definition in file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a600eaf353befc174637855795f12d258" name="a600eaf353befc174637855795f12d258"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a600eaf353befc174637855795f12d258">&#9670;&#160;</a></span>endl</h2>
 
@@ -171,7 +140,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00029">29</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00005">5</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -187,7 +156,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00033">33</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00009">9</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -203,7 +172,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00028">28</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00004">4</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +188,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00032">32</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00008">8</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -235,7 +204,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00030">30</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00006">6</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -251,7 +220,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00031">31</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00007">7</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +236,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00034">34</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00010">10</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -310,18 +279,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Add edge. </p>
-<p>This function is used to add an edge to the graph. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v</td><td>The starting vertex of the edge </td></tr>
-    <tr><td class="paramname">u</td><td>The ending vertex of the edge </td></tr>
-    <tr><td class="paramname">capacity</td><td>The capacity of the edge </td></tr>
-    <tr><td class="paramname">graph</td><td>The graph on which the edge is to be added </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00059">59</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00018">18</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -363,19 +321,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Augment. </p>
-<p>This function is used to augment the flow in the graph. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">graph</td><td>The graph on which the algorithm is to be run </td></tr>
-    <tr><td class="paramname">parent</td><td>The parent vector </td></tr>
-    <tr><td class="paramname">s</td><td>The source vertex </td></tr>
-    <tr><td class="paramname">t</td><td>The sink vertex </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The minimum flow that can be augmented </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00112">112</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00050">50</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -417,19 +363,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Breadth First Search. </p>
-<p>This function is used to find the shortest path from the source vertex to the sink vertex. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">graph</td><td>The graph on which the algorithm is to be run </td></tr>
-    <tr><td class="paramname">parent</td><td>The parent vector </td></tr>
-    <tr><td class="paramname">s</td><td>The source vertex </td></tr>
-    <tr><td class="paramname">t</td><td>The sink vertex </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if there exists a path from the source vertex to the sink vertex, false otherwise </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00076">76</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00025">25</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -465,18 +399,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ford-Fulkerson Algorithm. </p>
-<p>This algorithm is used to find the maximum flow in a network. It is implemented using the Breadth First Search (BFS) algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">graph</td><td>The graph on which the algorithm is to be run </td></tr>
-    <tr><td class="paramname">s</td><td>The source vertex </td></tr>
-    <tr><td class="paramname">t</td><td>The sink vertex </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The maximum flow in the network </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00159">159</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00080">80</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -495,9 +418,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Main function. </p>
-
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00175">175</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00091">91</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -509,12 +430,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const ll inf = 1e18</td>
+          <td class="memname">const <a class="el" href="_q1_8cpp.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> inf =1e18</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00035">35</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00011">11</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
@@ -525,12 +446,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const ll mod = 1e9 + 7</td>
+          <td class="memname">const <a class="el" href="_q1_8cpp.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> mod =1e9+7</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00036">36</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1___bipartite___matching_8cpp_source.html#l00012">12</a> of file <a class="el" href="_q1___bipartite___matching_8cpp_source.html">Q1_Bipartite_Matching.cpp</a>.</p>
 
 </div>
 </div>
