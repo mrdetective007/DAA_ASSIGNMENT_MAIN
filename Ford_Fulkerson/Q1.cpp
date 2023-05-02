@@ -233,7 +233,7 @@ void print_cut(vector<vector<Edge>> &graph, int s, int t)
  */
 int main()
 {
-    freopen("testcase1.txt", "r", stdin);
+    freopen("testcase3.txt", "r", stdin);
     freopen("output1.txt", "w+", stdout);
     int n, m, s, t;
     cin >> n >> m >> s >> t;
@@ -247,7 +247,7 @@ int main()
     // time analysis using chrono
     clock_t start, end;
     start = clock();
-    cout << start << " " << endl;
+    // cout << start << " " << endl;
     int max_flow = ford_fulkerson(graph, s, t);
     cout << "Maximum flow: " << max_flow << endl;
     cout << "The min s-t cut is: " << max_flow << endl;

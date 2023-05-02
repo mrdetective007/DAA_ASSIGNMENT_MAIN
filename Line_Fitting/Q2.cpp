@@ -162,8 +162,8 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	// take input from points.txt
-	freopen("points.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
+	freopen("points1.txt", "r", stdin);
+	freopen("output.txt", "w+", stdout);
 	int n;
 	double c;
 	cin >> n >> c;
