@@ -1,4 +1,8 @@
 // SULTAN KO SIRF SULTAN HARA SAKTA HAIN !!
+/**
+ *@file Q1.cpp
+ *@brief this code implements the Ford Fulkerson algorithm to find the maximum flow in a graph
+ */
 #include <algorithm>
 #include <fstream>
 #include <climits>
@@ -29,10 +33,26 @@ using namespace std;
 const ll inf = 1e18;
 const ll mod = 1e9 + 7;
 
+/**
+ * @brief This struct represents an edge in the graph
+ * @param v the source vertex
+ * @param u the destination vertex
+ * @param capacity the capacity of the edge
+ * @param flow the flow through the edge
+ *
+ */
 struct Edge
 {
     int v, u, capacity, flow;
 };
+/**
+ * @brief This function adds an edge to the graph
+ * @param v the source vertex
+ * @param u the destination vertex
+ * @param capacity the capacity of the edge
+ * @param graph the graph
+ *
+ */
 void add_edge(int v, int u, int capacity, vector<vector<Edge>> &graph)
 {
     Edge e1 = {v, u, capacity, 0};
@@ -40,6 +60,15 @@ void add_edge(int v, int u, int capacity, vector<vector<Edge>> &graph)
     graph[v].pb(e1);
     graph[u].pb(e2);
 }
+/**
+ * @brief This function performs a bfs on the graph
+ * @param graph the graph
+ * @param parent the parent array
+ * @param s the source vertex
+ * @param t the sink vertex
+ * @return true if there is a path from s to t
+ *
+ */
 bool bfs(vector<vector<Edge>> &graph, vector<int> &parent, int s, int t)
 {
     int n = graph.size();
@@ -66,6 +95,14 @@ bool bfs(vector<vector<Edge>> &graph, vector<int> &parent, int s, int t)
     }
     return visited[t];
 }
+/**
+ * @brief This function augments the path found by bfs
+ * @param graph the graph
+ * @param parent the parent array
+ * @param s the source vertex
+ * @param t the sink vertex
+ * @return the minimum flow in the path
+ */
 int augment(vector<vector<Edge>> &graph, vector<int> &parent, int s, int t)
 {
     int n = graph.size();
@@ -104,6 +141,13 @@ int augment(vector<vector<Edge>> &graph, vector<int> &parent, int s, int t)
     }
     return min_flow;
 }
+/**
+ * @brief This function implements the Ford Fulkerson algorithm
+ * @param graph the graph
+ * @param s the source vertex
+ * @param t the sink vertex
+ * @return the maximum flow in the graph
+ */
 int ford_fulkerson(vector<vector<Edge>> &graph, int s, int t)
 {
     int n = graph.size();
@@ -116,6 +160,11 @@ int ford_fulkerson(vector<vector<Edge>> &graph, int s, int t)
     }
     return max_flow;
 }
+/**
+ * @brief This function prints the graph
+ * @param graph the graph
+ *
+ */
 void print_graph(vector<vector<Edge>> &graph)
 {
     int n = graph.size();
@@ -132,6 +181,13 @@ void print_graph(vector<vector<Edge>> &graph)
         cout << endl;
     }
 }
+/**
+ * @brief This function performs a dfs on the graph
+ * @param graph the graph
+ * @param visited the visited array
+ * @param s the source vertex
+ *
+ */
 void dfs(vector<vector<Edge>> &graph, vector<bool> &visited, int s)
 {
     visited[s] = true;
@@ -143,6 +199,13 @@ void dfs(vector<vector<Edge>> &graph, vector<bool> &visited, int s)
         }
     }
 }
+/**
+ * @brief This function prints the min s-t cut
+ * @param graph the graph
+ * @param s the source vertex
+ * @param t the sink vertex
+ *
+ */
 void print_cut(vector<vector<Edge>> &graph, int s, int t)
 {
     int n = graph.size();
@@ -163,7 +226,11 @@ void print_cut(vector<vector<Edge>> &graph, int s, int t)
         }
     }
 }
-
+/**
+ * @brief This is the main function
+ * @return 0 on exit
+ *
+ */
 int main()
 {
     freopen("testcase1.txt", "r", stdin);

@@ -81,13 +81,34 @@ $(function() {
   <div class="headertitle"><div class="title">Q1.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;bits/stdc++.h&gt;</code><br />
+
+<p>this code implements the Ford Fulkerson algorithm to find the maximum flow in a graph  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;climits&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;bitset&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;numeric&gt;</code><br />
+<code>#include &lt;queue&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div>
 <p><a href="_q1_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edge.html">Edge</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents an edge in the graph.  <a href="struct_edge.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -110,30 +131,42 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8659eb080960e0ed196a2d44b61f57d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#a8659eb080960e0ed196a2d44b61f57d2">add_edge</a> (int v, int u, int capacity, vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph)</td></tr>
+<tr class="memdesc:a8659eb080960e0ed196a2d44b61f57d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function adds an edge to the graph.  <br /></td></tr>
 <tr class="separator:a8659eb080960e0ed196a2d44b61f57d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a251e7dfa4d3554746da7567bfde76430"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#a251e7dfa4d3554746da7567bfde76430">bfs</a> (vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph, vector&lt; int &gt; &amp;parent, int s, int t)</td></tr>
+<tr class="memdesc:a251e7dfa4d3554746da7567bfde76430"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function performs a bfs on the graph.  <br /></td></tr>
 <tr class="separator:a251e7dfa4d3554746da7567bfde76430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b4d685998b36a8bf0b979fe085d018e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#a3b4d685998b36a8bf0b979fe085d018e">augment</a> (vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph, vector&lt; int &gt; &amp;parent, int s, int t)</td></tr>
+<tr class="memdesc:a3b4d685998b36a8bf0b979fe085d018e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function augments the path found by bfs.  <br /></td></tr>
 <tr class="separator:a3b4d685998b36a8bf0b979fe085d018e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31be8702d01476863afe7fe5894b86be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#a31be8702d01476863afe7fe5894b86be">ford_fulkerson</a> (vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph, int s, int t)</td></tr>
+<tr class="memdesc:a31be8702d01476863afe7fe5894b86be"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function implements the Ford Fulkerson algorithm.  <br /></td></tr>
 <tr class="separator:a31be8702d01476863afe7fe5894b86be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7164e55c0bb3cfa2fe794d82eaabc937"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#a7164e55c0bb3cfa2fe794d82eaabc937">print_graph</a> (vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph)</td></tr>
+<tr class="memdesc:a7164e55c0bb3cfa2fe794d82eaabc937"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function prints the graph.  <br /></td></tr>
 <tr class="separator:a7164e55c0bb3cfa2fe794d82eaabc937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478169292a5d0d316d6554daab6584ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#a478169292a5d0d316d6554daab6584ea">dfs</a> (vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph, vector&lt; bool &gt; &amp;visited, int s)</td></tr>
+<tr class="memdesc:a478169292a5d0d316d6554daab6584ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function performs a dfs on the graph.  <br /></td></tr>
 <tr class="separator:a478169292a5d0d316d6554daab6584ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab39cfd8097e0f67770b94b2864a1f51b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#ab39cfd8097e0f67770b94b2864a1f51b">print_cut</a> (vector&lt; vector&lt; <a class="el" href="struct_edge.html">Edge</a> &gt; &gt; &amp;graph, int s, int t)</td></tr>
+<tr class="memdesc:ab39cfd8097e0f67770b94b2864a1f51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function prints the min s-t cut.  <br /></td></tr>
 <tr class="separator:ab39cfd8097e0f67770b94b2864a1f51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the main function.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:abcecb52cfca390874e4ff75904153ebe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_q1_8cpp.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#abcecb52cfca390874e4ff75904153ebe">inf</a> =1e18</td></tr>
+<tr class="memitem:abcecb52cfca390874e4ff75904153ebe"><td class="memItemLeft" align="right" valign="top">const ll&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#abcecb52cfca390874e4ff75904153ebe">inf</a> = 1e18</td></tr>
 <tr class="separator:abcecb52cfca390874e4ff75904153ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab235c0a809104a386f008dc5320af70c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_q1_8cpp.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#ab235c0a809104a386f008dc5320af70c">mod</a> =1e9+7</td></tr>
+<tr class="memitem:ab235c0a809104a386f008dc5320af70c"><td class="memItemLeft" align="right" valign="top">const ll&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_q1_8cpp.html#ab235c0a809104a386f008dc5320af70c">mod</a> = 1e9 + 7</td></tr>
 <tr class="separator:ab235c0a809104a386f008dc5320af70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>this code implements the Ford Fulkerson algorithm to find the maximum flow in a graph </p>
+
+<p class="definition">Definition in file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a600eaf353befc174637855795f12d258" name="a600eaf353befc174637855795f12d258"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a600eaf353befc174637855795f12d258">&#9670;&#160;</a></span>endl</h2>
 
@@ -146,7 +179,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00006">6</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00027">27</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -162,7 +195,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00010">10</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00031">31</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -178,7 +211,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00005">5</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00026">26</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -194,7 +227,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00009">9</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00030">30</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -210,7 +243,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00007">7</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00028">28</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -226,7 +259,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00008">8</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00029">29</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -242,7 +275,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00011">11</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00032">32</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -285,7 +318,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00018">18</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p>This function adds an edge to the graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>the source vertex </td></tr>
+    <tr><td class="paramname">u</td><td>the destination vertex </td></tr>
+    <tr><td class="paramname">capacity</td><td>the capacity of the edge </td></tr>
+    <tr><td class="paramname">graph</td><td>the graph </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00056">56</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -327,7 +371,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00046">46</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p>This function augments the path found by bfs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the graph </td></tr>
+    <tr><td class="paramname">parent</td><td>the parent array </td></tr>
+    <tr><td class="paramname">s</td><td>the source vertex </td></tr>
+    <tr><td class="paramname">t</td><td>the sink vertex </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the minimum flow in the path </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00106">106</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -369,7 +425,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00024">24</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p>This function performs a bfs on the graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the graph </td></tr>
+    <tr><td class="paramname">parent</td><td>the parent array </td></tr>
+    <tr><td class="paramname">s</td><td>the source vertex </td></tr>
+    <tr><td class="paramname">t</td><td>the sink vertex </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if there is a path from s to t </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00072">72</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +473,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00097">97</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p>This function performs a dfs on the graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the graph </td></tr>
+    <tr><td class="paramname">visited</td><td>the visited array </td></tr>
+    <tr><td class="paramname">s</td><td>the source vertex </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00191">191</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -441,7 +519,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00075">75</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p>This function implements the Ford Fulkerson algorithm. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the graph </td></tr>
+    <tr><td class="paramname">s</td><td>the source vertex </td></tr>
+    <tr><td class="paramname">t</td><td>the sink vertex </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the maximum flow in the graph </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00151">151</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +549,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00121">121</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p>This is the main function. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 on exit </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00234">234</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +588,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00105">105</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p>This function prints the min s-t cut. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the graph </td></tr>
+    <tr><td class="paramname">s</td><td>the source vertex </td></tr>
+    <tr><td class="paramname">t</td><td>the sink vertex </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00209">209</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -516,7 +618,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00085">85</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p>This function prints the graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the graph </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00168">168</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -528,12 +638,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="_q1_8cpp.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> inf =1e18</td>
+          <td class="memname">const ll inf = 1e18</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00012">12</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00033">33</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
@@ -544,12 +654,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="_q1_8cpp.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> mod =1e9+7</td>
+          <td class="memname">const ll mod = 1e9 + 7</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00013">13</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q1_8cpp_source.html#l00034">34</a> of file <a class="el" href="_q1_8cpp_source.html">Q1.cpp</a>.</p>
 
 </div>
 </div>
